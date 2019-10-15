@@ -1,0 +1,628 @@
+
+@font-face{
+    font-family: Anton;
+    src: url('../font/Anton-Regular.ttf'); 
+} 
+
+@font-face{
+    font-family: Roboto;
+    src: url('../font/RobotoSlab-Bold.ttf'); 
+} 
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bg_image{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.conteudo{
+    width: 1200px;
+    height: inherit;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    font-size: 22px;
+    font-family: Anton, Arial ,sans-serif;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    line-height: 1.5em;
+    padding-top: 10px;
+    color: #000000;
+    box-sizing: border-box;
+}
+
+label{
+    font-size: 18px;
+    font-family:  Anton, Arial, sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    line-height: 1.5em;
+}
+
+p{
+    font-size: 18px;
+    font-family: Anton,  Arial, sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    line-height: 1.5em;
+    color: #000000;
+}
+
+.texto{
+    color: #ffffff;
+    font-family: Anton, Arial, Helvetica, sans-serif;
+}
+
+.input{
+    width: 100%;
+    min-height: 35px;
+    border-radius: 5px;
+    outline: none;
+    border: solid 2px #ebc326;
+    transition: all 0.4s;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    font-family: Anton, Arial, sans-serif;
+    font-size: 15px;
+    cursor: text;
+}
+
+.input:focus{
+    border: solid 2px #bd9c1c;
+    transition: all 0.4s;
+}
+
+.input_btn{
+    width: 100%;
+    height: inherit;
+    background-color: #ebc326;
+    border: none;
+    border-bottom: 4px solid #bd9c1c;
+    color: #000000;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s;
+    font-weight: bolder;
+    font-family:  Anton, Arial, sans-serif;
+    font-size: 18px;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+.input_btn:hover{
+    background-color: #bd9c1c;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.preco{
+    width: 100%;
+    margin-top: 40px;
+    height: 40px;
+    text-align: left;
+    font-size: 20px;
+    font-family: Anton, Arial ,sans-serif;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    color: #bd9c1c;
+    box-sizing: border-box;
+}
+
+.sub_preco{
+    font-size: 16px;
+    color: #000000;
+    margin-top: 0px;
+}
+
+/* MODAL */
+
+.conteiner_modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    top:0px;
+    left: 0px;
+    position: fixed;
+    z-index: -10;
+    opacity:0;
+    transition: all 0.5s;
+}
+
+.conteiner_modal.exibirModal{
+    opacity:1;
+    z-index: 2000;
+    transition: all 0.5s;
+}
+
+.modal {
+    background-color: white;
+    width: 60vw;
+    min-height: 500px;
+    margin: 10vh auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px black;  
+    overflow: hidden;
+}
+
+/* MODAL HEADER */
+
+#modal_header{
+    width: 100%;
+    height: 50px;
+    background-color: #000000;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#fechar_modal{
+    font-size: 70px;
+    cursor: pointer;
+}
+
+#fechar_modal:hover{
+    color: #ebc326;
+}
+
+/*MODAL - Corpo */
+
+#modal_body{
+    width: 100%;
+    min-height: 500px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+#modal_jogos{
+    width: 49%;
+    height: inherit;
+}
+
+#dados_jogo{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#dados_jogo img{
+    width: 45%;
+    height: inherit;
+    background-color: #000000;
+}
+
+#modal_preco{
+    width: 52%;
+    height: inherit;
+}
+
+#descricao_jogo{
+    margin: 30px 0px;
+    width: 100%;
+    line-height: 1.5em;
+}
+
+#modal_loja{
+    width: 49%;
+    height: 600px;
+}
+
+#modal_enderecos{
+    width: 100%;
+    height: 49%;
+    overflow: auto;
+}
+
+#modal_enderecos::-webkit-scrollbar { 
+    border-radius: 10px; 
+    background-color: rgba(0 ,0,0, 0.5);
+}
+
+#modal_enderecos::-webkit-scrollbar-thumb {
+    border-radius: 10px; 
+    background :#bd9c1c;  
+}
+
+.caixa_endereco{
+    width: 100%;
+    min-height: 50px;
+    border-bottom: 1px solid rgba(0 ,0,0, 0.5);
+    margin-bottom: 30px;
+}
+
+#modal_maps{
+    margin-top: 2%;
+    width: 100%;
+    height: 49%;
+    overflow: hidden;
+}
+
+#modal_maps #maps{
+    width: 100%;
+    height: 100%;
+}
+
+.modal_loja_nome:hover{
+    color: #ebc326;
+    cursor: pointer;
+}
+
+
+/* HEADER*/
+
+header{
+    width: 100%;
+    height: 130px;
+    background-color: #000000;
+    border-bottom: 3px solid #ebc326;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
+    position: fixed;
+    z-index: 1;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    width: 200px;
+    height: 200px;
+}
+
+/* HEADER - Área de Pesquisa */
+
+#pesquisar{
+    width: 500px;
+}
+
+#pesquisar form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#txt_pesquisar{
+    width: 72%;
+}
+
+#btn_pesquisar{
+    width: 25%;
+    height: 40px;
+}
+
+/* SLIDER */
+
+.slider{
+    width: 100%;
+    min-height: 400px;
+    padding-top: 130px;
+}
+
+.caixa_slider{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    overflow: hidden;
+}
+
+.slide{
+    min-width: 100%;
+    height: 500px;
+}
+
+#sup_slider{
+    width: 100%;
+    height: 500px;
+    margin-top: -500px;
+    background-color: rgba(0,0,0, 0.5);
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao_slider{
+    background-color: transparent;
+    width: 80px;
+    height: 100%;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botao_slider:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 50px;
+    color: rgba(255,255,255, 0.8);
+    outline: none;
+    border: none;
+}
+
+/* PROGRESS BAR */
+
+.progress_bar{
+    width: 100%;
+    height: 5px;
+    background-color: rgba(0 ,0,0, 0.5);
+}
+
+.bar{
+    width: 100%;
+    height: 100%;
+}
+
+.progress{
+    width: 100%;
+    height: 100%;
+    background-color: #ebc326;
+    animation: progress 7s linear infinite;
+}
+
+@keyframes progress {
+    0% {
+        width:0%; opacity:0; 
+    }
+    10%{ 
+        width:0%;
+         opacity:0.8; 
+    }
+    20%{ 
+        width:20%; 
+        opacity:0.9; 
+    }
+    40%{ 
+        width:40%; 
+        opacity:0.9; 
+    }
+    60%{ 
+        width:60%; 
+        opacity:1; 
+    }
+    80%{ 
+        width:80%; 
+        opacity:1; 
+    }	
+    100%{ 
+        width:100%; 
+        opacity:1; 
+    }	
+}
+
+/* BODY */
+
+#body{
+    width: 100%;
+    min-height: 500px;
+}
+
+/* PARTE DE FILTROS POR CATEGORIA E CONSOLE */
+
+#filtro_jogos{
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#conteiner_filtro{
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#conteiner_filtro h1{
+    width: 150px;
+    padding-top: 5px;
+}
+
+#slt_filtro{
+    width: 250px;
+    height: 40px;
+}
+
+#conteiner_categoria{
+    display: none;
+}
+
+#conteiner_console{
+    display: none;
+}
+
+.caixa_filtro{
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Anton, Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+    border-bottom: 2px solid rgba(0 ,0,0, 0.3);
+}
+
+/* TITULO DA PAGINA */
+
+#conteiner_titulo{
+    margin-top: 10px;
+    height: 300px;
+    background-image: url(../img/body/titulo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    width: 40%;
+    text-align: center;
+    font-size: 28px;
+}
+
+/* CONTEINER COM OS JOGOS */
+.conteiner_generos{
+    width: 100%;
+    min-height: 450px;
+    margin-bottom: 70px;
+}
+
+.conteiner_generos h1{
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(0 ,0,0, 0.3);
+}
+
+.conteiner_jogos{
+    margin-top: 10px;
+    width: 100%;
+    min-height: 400px;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 400px;
+    align-items: center;
+}
+
+.jogo{
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0 ,0,0, 0.3);
+    box-shadow: 1px 1px 5px #000000;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.jogo img{
+    width: 100%;
+    height: 80%;
+    background-color: #ebc326;
+}
+
+.jogo h1{
+    text-align: center;
+    border: none;
+}
+
+.jogo:hover{
+    border: 1px solid rgba(0 ,0,0, 0.5);
+    box-shadow: 1px 1px 15px #000000;
+}
+
+/* RODAPÉ */
+
+footer{
+    width: 100%;
+    height: 250px;
+    background-color: #000000;
+    border-top: 3px solid #ebc326;
+}
+
+#footer{
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer h1{
+    margin: 15px auto;
+}
+
+#footer div{
+    width: 150px;
+}
+
+#footer_criador{
+    width: 400px !important;
+    padding-top: 200px;
+    box-sizing: border-box;
+}
+
+#redes_sociais img{
+    width: 50px;
+    height: 50px;
+    display: flex;
+}
+
+#redes_sociais{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55px;
+}
+
+/* EFEITOS PARA CARDS DE JOGOS */
+
+.ps4:hover > h1{
+    color: #207fc7;
+}
+
+.xbox:hover > h1{
+    color: #1aa31a;
+}
+
+.pc:hover > h1{
+    color: #5e5e5e;
+}
+
+/* PAGINÁ DE PESQUISA */
+
+#filtro_buscar{
+    width: 100%;
+    height: 100px;
+    padding-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#erro_buscar{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#erro_buscar img{
+    width: 700px;
+    height: 600px;
+}
